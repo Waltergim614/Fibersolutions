@@ -846,7 +846,7 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-.hero {
+/* .hero {
   width: 100%;
   min-height: 80vh;
   position: relative;
@@ -942,7 +942,99 @@ section,
   100% {
     transform: translateY(-10px);
   }
+} */
+
+/*--------------------------------------------------------------
+# Hero Section con Carrusel (Ancho Completo) - CORREGIDO
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 80vh; /* Altura del inicio, ajustable */
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  background: #283a5a; /* Color de fondo azul oscuro de Arsha por seguridad */
 }
+
+/* 1. Forzamos al contenedor principal de Swiper a llenar el héroe */
+#hero .hero-slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 2. Aseguramos que el wrapper de slides ocupe todo el espacio */
+#hero .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* 3. Estilos clave para cada Slide (imagen de fondo) a ANCHO COMPLETO */
+#hero .swiper-slide {
+  height: 100%;
+  background-size: cover;    /* La imagen escala para cubrir SIN deformarse */
+  background-position: center center; /* Centrada */
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* 4. Overlay oscuro automático para todos los slides (filtro) */
+#hero .swiper-slide:before {
+  content: "";
+  background: rgba(26, 38, 59, 0.7); /* Azul oscuro de Arsha con opacidad */
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; /* Por debajo del texto */
+}
+
+/* 5. Aseguramos que el contenido esté por encima del overlay */
+#hero .hero-content {
+  position: relative;
+  z-index: 2; /* Por encima del overlay */
+  color: #fff;
+  width: 100%; /* El contenedor interno también a ancho completo */
+}
+
+/* Estilos de los puntitos de paginación */
+#hero .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+#hero .swiper-pagination-bullet-active {
+  background-color: #47b2e4; /* Azul claro de Arsha */
+  opacity: 1;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 991px) {
+  #hero {
+    height: 100vh; /* Pantalla completa en móviles */
+  }
+  #hero .hero-content h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero .hero-content h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+
+
+
+
+
 
 /*--------------------------------------------------------------
 # Clients Section
@@ -1018,6 +1110,7 @@ section,
 .about .read-more:hover i {
   transform: translate(5px, 0);
 }
+
 
 /*--------------------------------------------------------------
 # Why Us Section
@@ -3286,9 +3379,7 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
+
 
 /*--------------------------------------------------------------
 # Error 404 Section
@@ -3574,4 +3665,15 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+/* Franja oscura exclusiva para la sección Proyectos */
+#header.bg-solo-proyectos {
+  background: rgba(40, 58, 90, 0.95) !important;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Empujar el contenido de Proyectos hacia abajo para que el menú no lo tape */
+#portfolio {
+  padding-top: 200px; /* Podés subir o bajar este número si querés más o menos espacio */
 }

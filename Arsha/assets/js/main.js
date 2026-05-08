@@ -230,3 +230,46 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+/**
+ * Forzar a AOS a recalcular las alturas una vez que todo cargó
+ * (Ideal para solucionar problemas con carruseles dinámicos)
+ */
+window.addEventListener('load', () => {
+  if (typeof AOS !== 'undefined') {
+    AOS.refresh();
+  }
+});
+
+window.addEventListener('load', () => {
+  const header = document.querySelector('#header');
+  const seccionProyectos = document.querySelector('#portfolio'); 
+
+  if(seccionProyectos && header) {
+    
+    // 1. Creamos la función que hace el cálculo
+    const checkHeaderBackground = () => {
+      const rect = seccionProyectos.getBoundingClientRect();
+      
+      if (rect.top <= 100 && rect.bottom >= 100) {
+        header.classList.add('bg-solo-proyectos');
+      } else {
+        header.classList.remove('bg-solo-proyectos');
+      }
+    };
+
+    // 2. La ejecutamos INMEDIATAMENTE al cargar la página (por si entraste directo)
+    checkHeaderBackground();
+
+    // 3. La ejecutamos cada vez que se hace scroll manual
+    window.addEventListener('scroll', checkHeaderBackground);
+    
+    // 4. La ejecutamos si alguien hace clic en los enlaces del menú
+    let navbars = document.querySelectorAll('.navbar a');
+    navbars.forEach(navbar => {
+      navbar.addEventListener('click', () => {
+        setTimeout(checkHeaderBackground, 800); // Esperamos 800ms a que termine el desplazamiento suave
+      });
+    });
+  }
+});

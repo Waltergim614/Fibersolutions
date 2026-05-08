@@ -9,7 +9,7 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/logo.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -85,8 +85,76 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+<section id="hero" class="d-flex align-items-center">
+  <div class="container-fluid padding-0">
+    <div class="hero-slider swiper init-swiper">
+      
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 1000,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": 1,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          }
+        }
+      </script>
+
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide" style="background-image: url('assets/img/hero1.png');">
+          <div class="container hero-content text-center text-lg-start">
+            <div class="row">
+              <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+                <h1>Soluciones Tecnológicas Integrales</h1>
+                <h2>Despliegue FTTH, Montaje de Racks, Consultoría Estratégica. Conectamos tu proyecto al futuro.</h2>
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                  <a href="#about" class="btn-get-started scrollto">Conócenos</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide" style="background-image: url('assets/img/hero2.png');">
+          <div class="container hero-content text-center text-lg-start">
+            <div class="row">
+              <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1">
+                <h1>Infraestructura</h1>
+                <h2>Montaje profesional de Racks y ODF para una gestión estética y centralizada de tu red.</h2>
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                  <a href="#services" class="btn-get-started scrollto">Nuestros Servicios</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide" style="background-image: url('assets/img/hero3.png');">
+          <div class="container hero-content text-center text-lg-start">
+            <div class="row">
+              <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1">
+                <h1>Conectividad Óptica Pura</h1>
+                <h2>Especialistas en tendido de fibra monomodo y multimodo con terminaciones de precisión.</h2>
+                <div class="d-flex justify-content-center justify-content-lg-start">
+                  <a href="#contact" class="btn-get-started scrollto">Cotiza tu Proyecto</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+ 
+    <!-- <section id="hero" class="hero section dark-background" HERO VIEJA>
 
       <div class="container">
         <div class="row gy-4">
@@ -104,7 +172,7 @@
         </div>
       </div>
 
-    </section><!-- /Hero Section -->
+    </section> -->
 
     <!-- Clients Section -->
     <section id="clients" class="clients section light-background">
@@ -115,16 +183,12 @@
           <script type="application/json" class="swiper-config">
             {
               "loop": true,
-              "speed": 600,
+              "speed": 500,
               "autoplay": {
                 "delay": 5000
               },
               "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
+
               "breakpoints": {
                 "320": {
                   "slidesPerView": 2,
@@ -150,14 +214,14 @@
             }
           </script>
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/clients-1.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-2.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-3.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-4.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-5.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-6.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-7.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-8.webp" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/cisco-2.svg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/corning-5.svg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/fujikura-seeklogo.svg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/zte-logo.svg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/huawei-2.svg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/furukawa.svg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/sumitomo-electric-industries-logo.svg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/mikrotik.svg" class="img-fluid" alt=""></div>
           </div>
         </div>
 
@@ -328,7 +392,7 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-activity icon"></i></div>
-              <h4><a href="" class="stretched-link">Despliegue FTTH Interno</a></h4>
+              <h4>Despliegue FTTH Interno</h4>
               <p> Tendido de fibra con cables FO, monomodo o multimodo.</p>
             </div>
           </div><!-- End Service Item -->
@@ -336,7 +400,7 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-              <h4><a href="" class="stretched-link">Montaje de Infraestructura</a></h4>
+              <h4>Montaje de Infraestructura</h4>
               <p> Provisión  de racks y ODF para una gestión estética y centralizada.</p>
             </div>
           </div><!-- End Service Item -->
@@ -344,7 +408,7 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-              <h4><a href="" class="stretched-link">Consultoría Estratégica</a></h4>
+              <h4>Consultoría Estratégica</h4>
               <p> Asesoría personalizada en fibra óptica para evitar sobrecostos y optimizar la inversión según cada proyecto.</p>
             </div>
           </div><!-- End Service Item -->
@@ -352,7 +416,7 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-              <h4><a href="" class="stretched-link">Despliegue FO externo</a></h4>
+              <h4>Despliegue FO externo</h4>
               <p>Tendidos de fibra externos, colocacion de herrajes, intervensiones subterraneas</p>
             </div>
           </div><!-- End Service Item -->
@@ -472,11 +536,11 @@
 
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           <div class="col-xl-9 text-center text-xl-start">
-            <h3>Call To Action</h3>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h3>Proyectos</h3>
+            <p>Galeria fotografica.</p>
           </div>
           <div class="col-xl-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
+            <a class="cta-btn align-middle" href="proyectos.html">Portafolio</a>
           </div>
         </div>
 
