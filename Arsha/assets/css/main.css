@@ -3681,3 +3681,41 @@ section,
 #portfolio {
   padding-top: 200px; /* Podés subir o bajar este número si querés más o menos espacio */
 }
+
+/*--------------------------------------------------------------
+# Botón Flotante de WhatsApp
+--------------------------------------------------------------*/
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 15px;
+  bottom: 70px;
+  background-color: #47b2e4;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 32px; /* Tamaño del ícono */
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+  z-index: 9999; /* Para que siempre esté por encima de todo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima */
+.whatsapp-float:hover {
+  background-color: #25d366;
+  color: #fff;
+  transform: scale(1.1); /* Se agranda un poquito, queda muy pro */
+}
+
+/* OPCIONAL: Si al final decides que lo quieres a la DERECHA, 
+  justo por encima del botón de subir, borra el "left: 40px;" de arriba
+  y usa estos dos valores en su lugar:
+  
+  right: 15px;
+  bottom: 70px;
+*/
