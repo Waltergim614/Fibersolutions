@@ -2325,6 +2325,10 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 200px; /* El mismo espacio que le dimos a Proyectos */
+}
+
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }
